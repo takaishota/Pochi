@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x8m-sv-SMS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x8m-sv-SMS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,10 @@
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <state key="normal" title="Start Recording!"/>
                                 <connections>
-                                    <action selector="recordButtonTapped" destination="x8m-sv-SMS" eventType="touchUpInside" id="7Fu-9g-7yL"/>
+                                    <action selector="startRecording:" destination="x8m-sv-SMS" eventType="touchDown" id="U3V-vY-0Ht"/>
+                                    <action selector="stopRecording:" destination="x8m-sv-SMS" eventType="touchUpOutside" id="ZNw-iB-hFP"/>
+                                    <action selector="stopRecording:" destination="x8m-sv-SMS" eventType="touchCancel" id="cdl-Rl-fE4"/>
+                                    <action selector="stopRecording:" destination="x8m-sv-SMS" eventType="touchUpInside" id="mbz-iZ-i30"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7hw-WD-fBp">
@@ -49,7 +52,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recordButton" destination="LJV-UZ-kOP" id="bdn-V9-XQ1"/>
                         <outlet property="textView" destination="7hw-WD-fBp" id="9Ep-Nt-2TV"/>
                     </connections>
                 </viewController>
