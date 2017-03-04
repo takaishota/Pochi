@@ -9,28 +9,38 @@
 import Foundation
 import Speech
 
+enum Result<T, E> {
+    case success(T)
+    case failure(E)
+}
+
 private func dispatchAsyncOnMain(block: (Void) -> (Void)) {
     dispatch_async(dispatch_get_main_queue(), block)
 }
 
 class VoiceRecognizer {
     
+    enum Error: ErrorType {
+        case NotAuthorized
+        case NoData
+    }
+    
     let recognizer = SFSpeechRecognizer(locale: NSLocale(localeIdentifier: "ja-JP"))
     let engine = AVAudioEngine()
     var task: SFSpeechRecognitionTask? = nil
     
-    typealias AuthorizationResult = Result<Void, VoiceRecognizerError>
-    typealias RecognizionResult = Result<String, VoiceRecognizerError>
+    typealias AuthorizationResult = Result<Void, VoiceRecognizer.Error>
+    typealias RecognizionResult = Result<String, VoiceRecognizer.Error>
     typealias CompletionHandler = (VoiceRecognizer.AuthorizationResult) -> (Void)
     
     func requestAuthorization(handler: VoiceRecognizer.CompletionHandler?) {
         SFSpeechRecognizer.requestAuthorization { (status) in
-            let result: Result<Void, VoiceRecognizerError>
+            let result: Result<Void, VoiceRecognizer.Error>
             switch status {
             case .Authorized:
                 result = .success()
             default:
-                result = .failure(VoiceRecognizerError.NotAuthorized)
+                result = .failure(VoiceRecognizer.Error.NotAuthorized)
             }
             handler?(result)
         }
