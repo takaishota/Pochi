@@ -68,6 +68,47 @@ class RobotConnection: Ev3ConnectionChangedDelegate {
     @objc func accessoryDisconnected(notification: NSNotification) {
         print(#function)
     }
+    
+    // MARK: - Hieh Layer
+    
+    let defaultPower: Int = 50
+    
+    func goStraight() {
+        moveWheel(.All, power: defaultPower)
+    }
+    
+    func stop() {
+        robotConnection.brick?.directCommand.stopMotor(onPorts: .All, withBrake: true)
+    }
+    
+    func goBackForword() {
+        moveWheel(.All, power: -defaultPower)
+    }
+
+    func turnArround() {
+        turnLeft(defaultPower)
+        turnRight(-defaultPower)
+    }
+    
+    func bark() {
+        robotConnection.brick?.directCommand.playSound(100, filename: "../prjs/EV3Sound/dog")
+    }
+    
+    // MARK: - Middle Layer
+
+    func turnLeft(power: Int) {
+        moveWheel(.B, power: power)
+    }
+    
+    func turnRight(power: Int) {
+        moveWheel(.C, power: power)
+    }
+    
+    // MARK: - Low Layer
+    
+    func moveWheel(port: OutputPort, power: Int) {
+        robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: port, withSpeed: Int16(power))
+    }
 }
 
 class FirstViewController: UIViewController {
@@ -80,13 +121,25 @@ class FirstViewController: UIViewController {
             self?.presentViewController(controller, animated: true, completion: {})
         }
     }
-    
-    @IBAction func run(sender: AnyObject) {
-        robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 50)
+
+    @IBAction func goStraight(sender: AnyObject) {
+        robotConnection.goStraight()
     }
     
-    @IBAction func stop(sender: AnyObject) {
-        robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 0)
+    @IBAction func turnArroundTapped(sender: AnyObject) {
+        robotConnection.turnArround()
+    }
+    
+    @IBAction func stopTapped(sender: AnyObject) {
+        robotConnection.stop()
+    }
+    
+    @IBAction func backForwordTapped(sender: AnyObject) {
+        robotConnection.goBackForword()
+    }
+
+    @IBAction func barkTapped(sender: AnyObject) {
+        robotConnection.bark()
     }
     
     override func viewDidLoad() {
