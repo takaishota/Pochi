@@ -50,9 +50,11 @@ public class SpeechRecognitionViewController: UIViewController, SFSpeechRecogniz
         try! voice.startRecording { [weak self] result in
             switch result {
             case .success(let string):
+                self?.textView?.text? = string
                     self?.performCommand(string)
             case .failure(let error):
                     print(error)
+                self?.textView?.text? = "\(error)"
             }
         }
     }
