@@ -9,8 +9,9 @@
 import UIKit
 import ExternalAccessory
 
-class FirstViewController: UIViewController, Ev3ConnectionChangedDelegate {
-    
+let robotConnection = RobotConnection()
+
+class RobotConnection: Ev3ConnectionChangedDelegate {
     var connection: Ev3Connection?
     var brick: Ev3Brick?
     
@@ -44,7 +45,7 @@ class FirstViewController: UIViewController, Ev3ConnectionChangedDelegate {
         print(connected)
     }
     
-    func accessoryConnected(notification: NSNotification) {
+    @objc func accessoryConnected(notification: NSNotification) {
         print("EAController::accessoryConnected")
         
         let connectedAccessory = notification.userInfo![EAAccessoryKey] as! EAAccessory
@@ -64,12 +65,15 @@ class FirstViewController: UIViewController, Ev3ConnectionChangedDelegate {
         connection?.open()
     }
     
-    func accessoryDisconnected(notification: NSNotification) {
+    @objc func accessoryDisconnected(notification: NSNotification) {
         print(#function)
     }
+}
 
+class FirstViewController: UIViewController {
+    
     @IBAction func batteryLevel(sender: AnyObject) {
-        self.brick?.directCommand.getBatteryLevel{ [weak self] (level) in
+        robotConnection.brick?.directCommand.getBatteryLevel{ [weak self] (level) in
             
             let controller = UIAlertController(title: "Battery Level", message: "\(level)", preferredStyle: UIAlertControllerStyle.Alert)
             controller.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
@@ -78,22 +82,17 @@ class FirstViewController: UIViewController, Ev3ConnectionChangedDelegate {
     }
     
     @IBAction func run(sender: AnyObject) {
-        self.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 50)
+        robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 50)
     }
     
     @IBAction func stop(sender: AnyObject) {
-        self.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 0)
+        robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 0)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+     
     }
 }
 
