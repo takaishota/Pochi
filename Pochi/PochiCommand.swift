@@ -25,9 +25,9 @@ enum PochiCommand : String {
         case .goAhead:
             robotConnection.goStraight()
         case .goBack:
-            robotConnection.goBackForword()
+            robotConnection.goBackForward()
         case .rotate:
-            robotConnection.turnArround()
+            robotConnection.turnAround()
         case .stop:
             robotConnection.stop()
         case .bark:
