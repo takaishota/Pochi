@@ -17,15 +17,21 @@ enum PochiCommand : String {
     case rotateKanji = "回れ"
     case stop = "とまれ"
     case stopKanji = "止まれ"
+    case bark = "ほえろ"
+    case barkKanji = "吠えろ"
     
     func execute() {
         switch self {
         case .goAhead:
             robotConnection.goStraight()
         case .goBack:
-            robotConnection.goBackForward()
+            robotConnection.goBackForword()
+        case .rotate:
+            robotConnection.turnArround()
         case .stop:
             robotConnection.stop()
+        case .bark:
+            robotConnection.bark()
         default:
             break
         }
