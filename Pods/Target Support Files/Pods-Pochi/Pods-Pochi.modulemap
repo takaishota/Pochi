@@ -1,0 +1,6 @@
+framework module Pods_Pochi {
+  umbrella header "Pods-Pochi-umbrella.h"
+
+  export *
+  module * { export * }
+}
