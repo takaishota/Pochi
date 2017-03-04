@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>657767756597-sv07t9oop4748p4hc6knpunei7uu761f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.657767756597-sv07t9oop4748p4hc6knpunei7uu761f</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6_4zZhUbPtnTr__2NCy-2wjNMWSz0A14</string>
+	<key>GCM_SENDER_ID</key>
+	<string>657767756597</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.Pochi</string>
+	<key>PROJECT_ID</key>
+	<string>pochi-test</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pochi-test.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:657767756597:ios:fe4d582892c78cf2</string>
+	<key>DATABASE_URL</key>
+	<string>https://pochi-test.firebaseio.com</string>
+</dict>
+</plist>
