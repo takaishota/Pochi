@@ -117,11 +117,11 @@ class RobotConnection: Ev3ConnectionChangedDelegate {
     }
 }
 
+public var actionArray: [AnyObject] = []
+
 class FirstViewController: UIViewController {
     
     var action: String?
-    
-    var actionArray: [AnyObject] = []
     
     var ref: FIRDatabaseReference!
     

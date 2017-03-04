@@ -27,22 +27,21 @@ public class SpeechRecognitionViewController: UIViewController, SFSpeechRecogniz
         switch string {
         case PochiCommand.goAhead.rawValue, PochiCommand.goAheadKanji.rawValue:
             PochiCommand.goAhead.execute()
+            actionArray.append("goStraight")
         case PochiCommand.stop.rawValue, PochiCommand.stopKanji.rawValue:
             PochiCommand.stop.execute()
+            actionArray.append("stop")
         case PochiCommand.goBack.rawValue, PochiCommand.goBackKanji.rawValue:
             PochiCommand.bark.execute()
+            actionArray.append("goBackForward")
         case PochiCommand.rotate.rawValue, PochiCommand.rotateKanji.rawValue:
             PochiCommand.rotate.execute()
+            actionArray.append("turnAround")
         case PochiCommand.bark.rawValue, PochiCommand.barkKanji.rawValue:
             PochiCommand.bark.execute()
+            actionArray.append("bark")
         default:
             break
-        }
-        
-        if string == PochiCommand.goAhead.rawValue || string == PochiCommand.goAheadKanji.rawValue {
-            PochiCommand.goAhead.execute()
-        } else if string == PochiCommand.stop.rawValue || string == PochiCommand.stopKanji.rawValue {
-            PochiCommand.stop.execute()
         }
     }
     
