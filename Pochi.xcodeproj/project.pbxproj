@@ -14,6 +14,7 @@
 		686C3D781E6A699700993A69 /* Storyboard_michie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */; };
 		686C3D7C1E6A69BC00993A69 /* Storyboard_takai.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */; };
 		686C3D801E6A886000993A69 /* PochiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C3D7F1E6A885F00993A69 /* PochiCommand.swift */; };
+		688724EA1E6AA59200800828 /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */; };
 		8C253BDD1E6A56090051C576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BDC1E6A56090051C576 /* AppDelegate.swift */; };
 		8C253BDF1E6A56090051C576 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BDE1E6A56090051C576 /* FirstViewController.swift */; };
 		8C253BE11E6A56090051C576 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BE01E6A56090051C576 /* SecondViewController.swift */; };
@@ -68,6 +69,7 @@
 		686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_michie.storyboard; sourceTree = "<group>"; };
 		686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_takai.storyboard; sourceTree = "<group>"; };
 		686C3D7F1E6A885F00993A69 /* PochiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PochiCommand.swift; sourceTree = "<group>"; };
+		688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
 		7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pochi/Pods-Pochi.debug.xcconfig"; sourceTree = "<group>"; };
 		8C253BD91E6A56090051C576 /* Pochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C253BDC1E6A56090051C576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */,
 				686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */,
 				686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */,
+				688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */,
 				686C3D7F1E6A885F00993A69 /* PochiCommand.swift */,
 				8C253BE51E6A56090051C576 /* Assets.xcassets */,
 				8C253BE71E6A56090051C576 /* LaunchScreen.storyboard */,
@@ -316,7 +319,7 @@
 				TargetAttributes = {
 					8C253BD81E6A56090051C576 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = P98QWW6UXS;
+						DevelopmentTeam = 46B6F6N95X;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -537,6 +540,7 @@
 				8C253C431E6A58A70051C576 /* Ev3Enums.swift in Sources */,
 				8C253C3E1E6A58A70051C576 /* Ev3BrickChangedDelegate.swift in Sources */,
 				8C253C481E6A58A70051C576 /* Ev3SimpleSounds.swift in Sources */,
+				688724EA1E6AA59200800828 /* SpeechRecognitionViewController.swift in Sources */,
 				8C253C441E6A58A70051C576 /* Ev3Port.swift in Sources */,
 				8C253BE11E6A56090051C576 /* SecondViewController.swift in Sources */,
 				8C253C401E6A58A70051C576 /* Ev3Connection.swift in Sources */,
@@ -692,7 +696,7 @@
 			baseConfigurationReference = 7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P98QWW6UXS;
+				DEVELOPMENT_TEAM = 46B6F6N95X;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -707,7 +711,7 @@
 			baseConfigurationReference = 1ABEB17B836E8319F323D700 /* Pods-Pochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P98QWW6UXS;
+				DEVELOPMENT_TEAM = 46B6F6N95X;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

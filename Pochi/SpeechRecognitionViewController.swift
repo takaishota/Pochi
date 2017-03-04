@@ -94,6 +94,21 @@ public class SpeechRecognitionViewController: UIViewController, SFSpeechRecogniz
                 let string = result.bestTranscription.formattedString
                 
                 print(result)
+                switch string {
+                case PochiCommand.goAhead.rawValue, PochiCommand.goAheadKanji.rawValue:
+                    PochiCommand.goAhead.execute()
+                case PochiCommand.stop.rawValue, PochiCommand.stopKanji.rawValue:
+                    PochiCommand.stop.execute()
+                case PochiCommand.goBack.rawValue, PochiCommand.goBackKanji.rawValue:
+                    PochiCommand.bark.execute()
+                case PochiCommand.rotate.rawValue, PochiCommand.rotateKanji.rawValue:
+                    PochiCommand.rotate.execute()
+                case PochiCommand.bark.rawValue, PochiCommand.barkKanji.rawValue:
+                    PochiCommand.bark.execute()
+                default:
+                    break
+                }
+                
                 if string == PochiCommand.goAhead.rawValue || string == PochiCommand.goAheadKanji.rawValue {
                     PochiCommand.goAhead.execute()
                 } else if string == PochiCommand.stop.rawValue || string == PochiCommand.stopKanji.rawValue {
