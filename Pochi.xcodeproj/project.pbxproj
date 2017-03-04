@@ -313,7 +313,7 @@
 				TargetAttributes = {
 					8C253BD81E6A56090051C576 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 46B6F6N95X;
+						DevelopmentTeam = LCX63NC722;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -688,12 +688,13 @@
 			baseConfigurationReference = 7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 46B6F6N95X;
+				DEVELOPMENT_TEAM = LCX63NC722;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -702,12 +703,13 @@
 			baseConfigurationReference = 1ABEB17B836E8319F323D700 /* Pods-Pochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 46B6F6N95X;
+				DEVELOPMENT_TEAM = LCX63NC722;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
