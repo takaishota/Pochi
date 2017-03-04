@@ -10,6 +10,7 @@ import UIKit
 import ExternalAccessory
 
 let robotConnection = RobotConnection()
+let voice = VoiceRecognizer()
 
 class RobotConnection: Ev3ConnectionChangedDelegate {
     var connection: Ev3Connection?
@@ -92,7 +93,24 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
+        voice.requestAuthorization {
+            retuls in
+        }
+    }
+    @IBAction func finish(sender: AnyObject) {
+        voice.finish()
+    }
+    
+    @IBAction func record(sender: AnyObject) {
+        
+        let _ = try? voice.startRecording { (result) in
+            switch result {
+            case .success(let string):
+                print(string)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
