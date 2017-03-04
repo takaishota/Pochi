@@ -8,12 +8,15 @@
 
 import UIKit
 import ExternalAccessory
+import Firebase
 
 let robotConnection = RobotConnection()
 
 class RobotConnection: Ev3ConnectionChangedDelegate {
     var connection: Ev3Connection?
     var brick: Ev3Brick?
+    
+
     
     func setup() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(accessoryConnected), name: EAAccessoryDidConnectNotification, object: nil)
@@ -81,17 +84,20 @@ class RobotConnection: Ev3ConnectionChangedDelegate {
         robotConnection.brick?.directCommand.stopMotor(onPorts: .All, withBrake: true)
     }
     
-    func goBackForword() {
+    func goBackForward() {
         moveWheel(.All, power: -defaultPower)
+        
     }
 
-    func turnArround() {
+    func turnAround() {
         turnLeft(defaultPower)
         turnRight(-defaultPower)
+        
     }
     
     func bark() {
         robotConnection.brick?.directCommand.playSound(100, filename: "../prjs/EV3Sound/dog")
+        
     }
     
     // MARK: - Middle Layer
@@ -113,6 +119,12 @@ class RobotConnection: Ev3ConnectionChangedDelegate {
 
 class FirstViewController: UIViewController {
     
+    var action: String?
+    
+    var actionArray: [AnyObject] = []
+    
+    var ref: FIRDatabaseReference!
+    
     @IBAction func batteryLevel(sender: AnyObject) {
         robotConnection.brick?.directCommand.getBatteryLevel{ [weak self] (level) in
             
@@ -124,28 +136,49 @@ class FirstViewController: UIViewController {
 
     @IBAction func goStraight(sender: AnyObject) {
         robotConnection.goStraight()
+        actionArray.append("goStraight")
     }
     
-    @IBAction func turnArroundTapped(sender: AnyObject) {
-        robotConnection.turnArround()
+    @IBAction func turnAroundTapped(sender: AnyObject) {
+        robotConnection.turnAround()
+        actionArray.append("turnAround")
     }
     
     @IBAction func stopTapped(sender: AnyObject) {
         robotConnection.stop()
+        actionArray.append("stop")
     }
     
-    @IBAction func backForwordTapped(sender: AnyObject) {
-        robotConnection.goBackForword()
+    @IBAction func backForwardTapped(sender: AnyObject) {
+        robotConnection.goBackForward()
+        actionArray.append("goBackForward")
     }
 
     @IBAction func barkTapped(sender: AnyObject) {
         robotConnection.bark()
+        actionArray.append("bark")
     }
+    
+    @IBAction func saveToFirebase(sender: AnyObject) {
+         self.ref.child("pochi-test").setValue(actionArray)
+    }
+    
+    @IBAction func repeatAction(sender: AnyObject) {
+        ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            if !snapshot.exists() { return }
+            
+            print(snapshot)
+            
+        })
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-     
+        ref = FIRDatabase.database().reference()
     }
 }
 
