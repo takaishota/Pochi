@@ -21,11 +21,11 @@ enum PochiCommand : String {
     func execute() {
         switch self {
         case .goAhead:
-            robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 50)
+            robotConnection.goStraight()
         case .goBack:
-            robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: -50)
+            robotConnection.goBackForword()
         case .stop:
-            robotConnection.brick?.directCommand.turnMotorAtSpeed(onPorts: OutputPort.All, withSpeed: 0)
+            robotConnection.stop()
         default:
             break
         }
