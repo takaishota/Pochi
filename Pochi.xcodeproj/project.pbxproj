@@ -13,6 +13,7 @@
 		686C3D761E6A697700993A69 /* Storyboard_chiba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */; };
 		686C3D781E6A699700993A69 /* Storyboard_michie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */; };
 		686C3D7C1E6A69BC00993A69 /* Storyboard_takai.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */; };
+		686C3D801E6A886000993A69 /* PochiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C3D7F1E6A885F00993A69 /* PochiCommand.swift */; };
 		8C253BDD1E6A56090051C576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BDC1E6A56090051C576 /* AppDelegate.swift */; };
 		8C253BDF1E6A56090051C576 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BDE1E6A56090051C576 /* FirstViewController.swift */; };
 		8C253BE11E6A56090051C576 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BE01E6A56090051C576 /* SecondViewController.swift */; };
@@ -65,6 +66,7 @@
 		686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_chiba.storyboard; sourceTree = "<group>"; };
 		686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_michie.storyboard; sourceTree = "<group>"; };
 		686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_takai.storyboard; sourceTree = "<group>"; };
+		686C3D7F1E6A885F00993A69 /* PochiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PochiCommand.swift; sourceTree = "<group>"; };
 		7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pochi/Pods-Pochi.debug.xcconfig"; sourceTree = "<group>"; };
 		8C253BD91E6A56090051C576 /* Pochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C253BDC1E6A56090051C576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */,
 				686C3D771E6A699700993A69 /* Storyboard_michie.storyboard */,
 				686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */,
+				686C3D7F1E6A885F00993A69 /* PochiCommand.swift */,
 				8C253BE51E6A56090051C576 /* Assets.xcassets */,
 				8C253BE71E6A56090051C576 /* LaunchScreen.storyboard */,
 				8C253BEA1E6A56090051C576 /* Info.plist */,
@@ -526,6 +529,7 @@
 			files = (
 				8C253C421E6A58A70051C576 /* Ev3DirectCommand.swift in Sources */,
 				8C253C3F1E6A58A70051C576 /* Ev3Command.swift in Sources */,
+				686C3D801E6A886000993A69 /* PochiCommand.swift in Sources */,
 				8C253C3D1E6A58A70051C576 /* Ev3Brick.swift in Sources */,
 				8C253C431E6A58A70051C576 /* Ev3Enums.swift in Sources */,
 				8C253C3E1E6A58A70051C576 /* Ev3BrickChangedDelegate.swift in Sources */,
