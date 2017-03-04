@@ -6,6 +6,9 @@ target 'Pochi' do
   use_frameworks!
 
   # Pods for Pochi
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'PochiTests' do
     inherit! :search_paths
