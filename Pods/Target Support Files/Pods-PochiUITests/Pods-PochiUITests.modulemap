@@ -1,0 +1,6 @@
+framework module Pods_PochiUITests {
+  umbrella header "Pods-PochiUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
