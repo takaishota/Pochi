@@ -87,7 +87,6 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="LgN-0Q-xoM" kind="relationship" relationship="viewControllers" id="Obh-Mu-5sh"/>
                         <segue destination="gip-2r-IjT" kind="relationship" relationship="viewControllers" id="axJ-fw-9vw"/>
-                        <segue destination="hG1-WI-Buz" kind="relationship" relationship="viewControllers" id="Uvz-Nc-aue"/>
                         <segue destination="rIK-ma-Rec" kind="relationship" relationship="viewControllers" id="e9U-su-AuY"/>
                         <segue destination="N6e-Sg-qKP" kind="relationship" relationship="viewControllers" id="0kU-q6-TLv"/>
                     </connections>
@@ -100,7 +99,7 @@
         <scene sceneID="2MO-gN-P7o">
             <objects>
                 <viewControllerPlaceholder storyboardName="Storyboard_chiba" id="LgN-0Q-xoM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cfc-fR-vk2"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="first" id="cfc-fR-vk2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOO-LY-hcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,21 +109,11 @@
         <scene sceneID="h3S-Dc-iYN">
             <objects>
                 <viewControllerPlaceholder storyboardName="Storyboard_michie" id="gip-2r-IjT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sda-ue-chb"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="first" id="Sda-ue-chb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkR-5U-q29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="108"/>
-        </scene>
-        <!--Storyboard_nori-->
-        <scene sceneID="Qxi-5G-1eV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Storyboard_nori" id="hG1-WI-Buz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jYE-mK-vXc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GWw-6e-q8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="618" y="170"/>
         </scene>
         <!--Storyboard_takai-->
         <scene sceneID="dUW-fl-ef9">
@@ -134,7 +123,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76D-48-WVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="233"/>
+            <point key="canvasLocation" x="618" y="186"/>
         </scene>
         <!--Storyboard_take-->
         <scene sceneID="HIm-mw-Wte">
@@ -144,7 +133,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzN-vt-S6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="300"/>
+            <point key="canvasLocation" x="618" y="250"/>
         </scene>
     </scenes>
     <resources>

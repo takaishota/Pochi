@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--takai-->
         <scene sceneID="ZOF-QH-CTJ">
             <objects>
-                <viewController id="x8m-sv-SMS" sceneMemberID="viewController">
+                <viewController title="takai" id="x8m-sv-SMS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnV-fg-exk"/>
                         <viewControllerLayoutGuide type="bottom" id="xib-3e-eSj"/>
