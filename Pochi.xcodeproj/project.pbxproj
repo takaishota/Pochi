@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1A8E971E6AA0EC0035D5E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1A8E961E6AA0EC0035D5E1 /* GoogleService-Info.plist */; };
 		57CC399D184B11994E3EFDF4 /* Pods_PochiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7BC401CD0ADF0807AAB8ED /* Pods_PochiUITests.framework */; };
 		5FE1F235C5A3EE7D03389070 /* Pods_PochiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294CB4F2AF7277770099D252 /* Pods_PochiTests.framework */; };
 		686C3D741E6A696400993A69 /* Storyboard_take.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D731E6A696400993A69 /* Storyboard_take.storyboard */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1A8E961E6AA0EC0035D5E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1ABEB17B836E8319F323D700 /* Pods-Pochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pochi/Pods-Pochi.release.xcconfig"; sourceTree = "<group>"; };
 		294CB4F2AF7277770099D252 /* Pods_PochiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PochiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3597CCBE2A775CEC4A8210 /* Pods-PochiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PochiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PochiTests/Pods-PochiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		8C253BD01E6A56090051C576 = {
 			isa = PBXGroup;
 			children = (
+				0E1A8E961E6AA0EC0035D5E1 /* GoogleService-Info.plist */,
 				8C253BDB1E6A56090051C576 /* Pochi */,
 				8C253BF21E6A56090051C576 /* PochiTests */,
 				8C253BFD1E6A56090051C576 /* PochiUITests */,
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				686C3D781E6A699700993A69 /* Storyboard_michie.storyboard in Resources */,
+				0E1A8E971E6AA0EC0035D5E1 /* GoogleService-Info.plist in Resources */,
 				8C253BE91E6A56090051C576 /* LaunchScreen.storyboard in Resources */,
 				8C253BE61E6A56090051C576 /* Assets.xcassets in Resources */,
 				686C3D761E6A697700993A69 /* Storyboard_chiba.storyboard in Resources */,
@@ -460,7 +464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AF8D20459F0C3CBC45E19212 /* [CP] Check Pods Manifest.lock */ = {
@@ -475,7 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C2087CDCE52AFEF046154D27 /* [CP] Embed Pods Frameworks */ = {
@@ -520,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
