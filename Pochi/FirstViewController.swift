@@ -21,7 +21,11 @@ class FirstViewController: UIViewController, Ev3ConnectionChangedDelegate {
         print(EAAccessoryManager.sharedAccessoryManager().connectedAccessories.count)
         
         let accessory = getEv3Accessory()
-        connect(accessory!)
+        if let a = accessory {
+            connect(a)
+        } else {
+            print("Not Connected.")
+        }
     }
     
     private func getEv3Accessory() -> EAAccessory? {
