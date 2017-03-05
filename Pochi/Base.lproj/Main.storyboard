@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="785" y="-326"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -174,39 +174,80 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="LgN-0Q-xoM" kind="relationship" relationship="viewControllers" id="Obh-Mu-5sh"/>
-                        <segue destination="rIK-ma-Rec" kind="relationship" relationship="viewControllers" id="e9U-su-AuY"/>
+                        <segue destination="2ra-IT-wOM" kind="relationship" relationship="viewControllers" id="nhm-4y-skH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Storyboard_chiba-->
-        <scene sceneID="2MO-gN-P7o">
+        <!--Voice-->
+        <scene sceneID="Lgx-W6-NMS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Storyboard_chiba" id="LgN-0Q-xoM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gyro" image="gyro" id="cfc-fR-vk2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zOO-LY-hcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Voice" id="2ra-IT-wOM" customClass="SpeechRecognitionViewController" customModule="Pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W6X-fJ-JFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ls-aq-hpW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5TE-15-QiU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-w5-ssM">
+                                <rect key="frame" x="16" y="565" width="343" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" red="0.25882352939999997" green="0.20392156859999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startRecording:" destination="2ra-IT-wOM" eventType="touchDown" id="4WE-vd-Hdf"/>
+                                    <action selector="stopRecording:" destination="2ra-IT-wOM" eventType="touchUpInside" id="aMu-fg-k9M"/>
+                                    <action selector="stopRecording:" destination="2ra-IT-wOM" eventType="touchCancel" id="cHx-eO-idi"/>
+                                    <action selector="stopRecording:" destination="2ra-IT-wOM" eventType="touchUpOutside" id="egM-eM-enu"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-nt-bsN">
+                                <rect key="frame" x="16" y="20" width="343" height="537"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pochi-image" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-02-ldm">
+                                <rect key="frame" x="87" y="340" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Xo0-zC-JMz"/>
+                                    <constraint firstAttribute="width" constant="200" id="f2N-xc-irk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.94901960780000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iyU-nt-bsN" firstAttribute="leading" secondItem="5TE-15-QiU" secondAttribute="leadingMargin" id="2TL-W4-yUx"/>
+                            <constraint firstItem="iyU-nt-bsN" firstAttribute="top" secondItem="W6X-fJ-JFY" secondAttribute="bottom" id="FZW-0U-qGI"/>
+                            <constraint firstItem="iyU-nt-bsN" firstAttribute="trailing" secondItem="5TE-15-QiU" secondAttribute="trailingMargin" id="Ipq-IZ-DSW"/>
+                            <constraint firstItem="6ls-aq-hpW" firstAttribute="top" secondItem="bOJ-w5-ssM" secondAttribute="bottom" constant="20" id="JRC-x2-00q"/>
+                            <constraint firstItem="bOJ-w5-ssM" firstAttribute="top" secondItem="TVy-02-ldm" secondAttribute="bottom" constant="25" id="Xzk-uH-4Pb"/>
+                            <constraint firstItem="bOJ-w5-ssM" firstAttribute="top" secondItem="iyU-nt-bsN" secondAttribute="bottom" constant="8" id="aaV-dZ-H3U"/>
+                            <constraint firstItem="TVy-02-ldm" firstAttribute="leading" secondItem="5TE-15-QiU" secondAttribute="leadingMargin" constant="71" id="bfm-Qt-ViX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVy-02-ldm" secondAttribute="trailing" constant="72" id="f0E-ya-zDb"/>
+                            <constraint firstItem="bOJ-w5-ssM" firstAttribute="trailing" secondItem="5TE-15-QiU" secondAttribute="trailingMargin" id="icO-52-FGD"/>
+                            <constraint firstItem="bOJ-w5-ssM" firstAttribute="leading" secondItem="5TE-15-QiU" secondAttribute="leadingMargin" id="kcK-3T-yqU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Voice" image="voice" id="dGB-Hd-xKL"/>
+                    <connections>
+                        <outlet property="textView" destination="iyU-nt-bsN" id="YTK-5w-d7U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBL-mN-nNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="52"/>
-        </scene>
-        <!--Storyboard_takai-->
-        <scene sceneID="dUW-fl-ef9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Storyboard_takai" id="rIK-ma-Rec" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Voice" image="voice" id="WaH-eK-LX2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="76D-48-WVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="618" y="186"/>
+            <point key="canvasLocation" x="785" y="369"/>
         </scene>
     </scenes>
     <resources>
         <image name="Pochi-image" width="200" height="200"/>
         <image name="button" width="30" height="30"/>
-        <image name="gyro" width="30" height="30"/>
         <image name="voice" width="30" height="30"/>
     </resources>
 </document>

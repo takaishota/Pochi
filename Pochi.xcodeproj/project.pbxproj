@@ -10,8 +10,6 @@
 		0E1A8E971E6AA0EC0035D5E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1A8E961E6AA0EC0035D5E1 /* GoogleService-Info.plist */; };
 		57CC399D184B11994E3EFDF4 /* Pods_PochiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7BC401CD0ADF0807AAB8ED /* Pods_PochiUITests.framework */; };
 		5FE1F235C5A3EE7D03389070 /* Pods_PochiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294CB4F2AF7277770099D252 /* Pods_PochiTests.framework */; };
-		686C3D761E6A697700993A69 /* Storyboard_chiba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */; };
-		686C3D7C1E6A69BC00993A69 /* Storyboard_takai.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */; };
 		686C3D801E6A886000993A69 /* PochiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C3D7F1E6A885F00993A69 /* PochiCommand.swift */; };
 		688724EA1E6AA59200800828 /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */; };
 		8C253BDD1E6A56090051C576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C253BDC1E6A56090051C576 /* AppDelegate.swift */; };
@@ -64,8 +62,6 @@
 		294CB4F2AF7277770099D252 /* Pods_PochiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PochiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3597CCBE2A775CEC4A8210 /* Pods-PochiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PochiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PochiTests/Pods-PochiTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E6AAA9450969AFD2D098A68 /* Pods-PochiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PochiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PochiUITests/Pods-PochiUITests.release.xcconfig"; sourceTree = "<group>"; };
-		686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_chiba.storyboard; sourceTree = "<group>"; };
-		686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_takai.storyboard; sourceTree = "<group>"; };
 		686C3D7F1E6A885F00993A69 /* PochiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PochiCommand.swift; sourceTree = "<group>"; };
 		688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
 		7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pochi/Pods-Pochi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,8 +184,6 @@
 				8CFA3D491E6A923E0005368B /* Voice.swift */,
 				8C253BE01E6A56090051C576 /* SecondViewController.swift */,
 				8C253BE21E6A56090051C576 /* Main.storyboard */,
-				686C3D751E6A697700993A69 /* Storyboard_chiba.storyboard */,
-				686C3D7B1E6A69BC00993A69 /* Storyboard_takai.storyboard */,
 				688724E91E6AA59200800828 /* SpeechRecognitionViewController.swift */,
 				686C3D7F1E6A885F00993A69 /* PochiCommand.swift */,
 				8C253BE51E6A56090051C576 /* Assets.xcassets */,
@@ -316,7 +310,7 @@
 				TargetAttributes = {
 					8C253BD81E6A56090051C576 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = P98QWW6UXS;
+						DevelopmentTeam = 46B6F6N95X;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -364,8 +358,6 @@
 				0E1A8E971E6AA0EC0035D5E1 /* GoogleService-Info.plist in Resources */,
 				8C253BE91E6A56090051C576 /* LaunchScreen.storyboard in Resources */,
 				8C253BE61E6A56090051C576 /* Assets.xcassets in Resources */,
-				686C3D761E6A697700993A69 /* Storyboard_chiba.storyboard in Resources */,
-				686C3D7C1E6A69BC00993A69 /* Storyboard_takai.storyboard in Resources */,
 				8C253BE41E6A56090051C576 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,7 +684,7 @@
 			baseConfigurationReference = 7878BBF664B06D807C8F0B1B /* Pods-Pochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P98QWW6UXS;
+				DEVELOPMENT_TEAM = 46B6F6N95X;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -707,7 +699,7 @@
 			baseConfigurationReference = 1ABEB17B836E8319F323D700 /* Pods-Pochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P98QWW6UXS;
+				DEVELOPMENT_TEAM = 46B6F6N95X;
 				INFOPLIST_FILE = Pochi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
