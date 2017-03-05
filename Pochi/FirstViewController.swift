@@ -168,8 +168,23 @@ class FirstViewController: UIViewController {
             
             if !snapshot.exists() { return }
             
-            print(snapshot)
-            
+            let child = snapshot.childSnapshotForPath("pochi-test")
+            guard let actions = child.value as? [String] else { return }
+
+            for i in actions {
+                if i == "goStraight" {
+                    robotConnection.goStraight()
+                } else if i == "turnAround" {
+                    robotConnection.turnAround()
+                } else if i == "stop" {
+                    robotConnection.stop()
+                } else if i == "goBackForword" {
+                    robotConnection.goBackForward()
+                } else if i == "bark" {
+                    robotConnection.bark()
+                }
+
+            }
         })
     }
     
